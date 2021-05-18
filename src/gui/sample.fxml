@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="435.0" prefWidth="464.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <StackPane prefHeight="422.0" prefWidth="405.0" styleClass="root">
+         <children>
+            <HBox fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="130.0" spacing="5.0" styleClass="hbox" StackPane.alignment="TOP_CENTER">
+               <children>
+                  <Button mnemonicParsing="false" text="Start" textFill="#3ed021" HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" text="Stop" textFill="#d76230" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="354.0" StackPane.alignment="CENTER">
+               <children>
+                  <Circle layoutX="178.0" layoutY="173.0" radius="129.0" stroke="#d96216" strokeLineCap="ROUND" strokeWidth="4.0">
+                     <fill>
+                        <RadialGradient centerX="0.49444444444444446" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6299999952316284" green="0.38062500953674316" blue="0.03150000050663948" opacity="0.9178261160850525" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+
+                  <ImageView fitHeight="54.0" fitWidth="58.0" layoutX="27.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
+                        <Image url="@/philo2.png" />
+                  </ImageView>
+                  <ImageView fx:id="logo" fitHeight="46.0" fitWidth="59.0" layoutX="149.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
+                     <Image url="@/philo2.png" />
+                  </ImageView>
+                  <ImageView fitHeight="56.0" fitWidth="59.0" layoutX="268.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@/philo2.png" />
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="309.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" >
+                     <Image url="@/philo2.png" />
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="283.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" >
+                     <Image url="@/philo2.png" />
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="161.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true" >
+                     <Image url="@/philo2.png" />
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="40.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" >
+                     <Image url="@/philo2.png" />
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true" >
+                     <Image url="@/philo2.png" />
+                  </ImageView>
+                  <!--<ImageView fitHeight="35.0" fitWidth="35.0" layoutX="49.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />-->
+               </children>
+            </Pane>
+         </children></StackPane>
+   </children>
+</GridPane>
