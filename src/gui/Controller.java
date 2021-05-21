@@ -2,9 +2,11 @@ package gui;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import philos.Diner;
 
 import java.io.File;
 import java.net.URL;
@@ -16,6 +18,11 @@ public class Controller implements Initializable {
 
     @FXML
     Pane pane;
+
+    @FXML
+    Button start;
+    @FXML
+    Button stop;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,5 +40,18 @@ public class Controller implements Initializable {
         img.setLayoutY(77.0);
         img.setPreserveRatio(true);
         pane.getChildren().add(img);
+
+        start.setOnAction(e -> {
+            start.setDisable(true);
+            stop.setDisable(false);
+
+            Diner.start();
+        });
+        stop.setOnAction(e -> {
+            start.setDisable(false);
+            stop.setDisable(true);
+
+            Diner.stop();
+        });
     }
 }

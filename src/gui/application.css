@@ -3,17 +3,17 @@
     -fx-background-color: #2f4f4f;
 }
 .hbox {
-    -fx-background-color: #2f4f4f;
+    /*  -fx-background-color: #2f4f4f;
     /*
-    -fx-fill: yellow;
-    -fx-stroke: green;
-    -fx-stroke-width: 5;
-    -fx-stroke-dash-array: 12 2 4 2;
-    -fx-stroke-dash-offset: 6;
-    -fx-stroke-line-cap: butt;*/
+      -fx-fill: yellow;
+      -fx-stroke: green;
+      -fx-stroke-width: 5;
+      -fx-stroke-dash-array: 12 2 4 2;
+      -fx-stroke-dash-offset: 6;
+      -fx-stroke-line-cap: butt;*/
 }
 .root{
-    -fx-background-color: #2f4f4f;
+    /*-fx-background-color: #2f4f4f;*/
 }
 
 .pane {
