@@ -3,11 +3,6 @@ package philos;
 import java.util.Arrays;
 import java.util.concurrent.Semaphore;
 
-enum State{
-    Thinking,
-    Starving,
-    Eating
-}
 public class Diner {
     private static final int NB_PHILOS=8;
 
@@ -23,7 +18,9 @@ public class Diner {
 
     private static int stillRunning=NB_PHILOS;
 
-    public static void start() {
+    static INotifier notifier;
+    public static void start(INotifier _notifier) {
+        notifier = _notifier;
 
         System.out.println("******************************************");
         System.out.println("********* Problème Philosophes! **********");
@@ -70,6 +67,7 @@ public class Diner {
             eating(num);
         }
         System.out.println("philo "+num+" ==>I've finished!");
+        notifier.notify(State.Finished, num);
 
         if(--stillRunning==0)
             show_stats();
@@ -83,8 +81,8 @@ public class Diner {
 
     private static void thinking(int num) {
         states[num]=State.Thinking;
-        System.out.println("philo "+num+"..thinking..");
-
+        //System.out.println("philo "+num+"..thinking..");
+        notifier.notify(State.Thinking, num);
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
@@ -99,6 +97,7 @@ public class Diner {
         int[] wanted = {num, (num+1)%NB_PHILOS};
 
         System.out.println("philo "+num+"..waiting for forks : "+Arrays.toString(wanted));
+        notifier.notify(State.Starving, num);
         getForks(num, wanted);
     }
     private static synchronized void getForks(int num, int[] wanted) {
@@ -115,14 +114,14 @@ public class Diner {
     }
     private static void letForks(int num, int[] wanted) {
         forks[wanted[0]] = forks[wanted[1]]=true;
-        System.out.println("philo "+num+"..finished eating! release forks : "+Arrays.toString(wanted));
+        //System.out.println("philo "+num+"..finished eating! release forks : "+Arrays.toString(wanted));
 
         semaphore.release();
     }
     private static void eating(int num) {
         states[num]=State.Eating;
         System.out.println("=========> philo "+num+"..eating.. with ("+num+","+(num+1)%NB_PHILOS +")");
-
+        notifier.notify(State.Eating, num);
         try {
             Thread.sleep(2000);
             letForks(num, new int[]{num, (num+1)%NB_PHILOS});
@@ -137,7 +136,7 @@ public class Diner {
         new Thread(()->{
             try {
                 System.out.println("wait..before stop!");
-                Thread.sleep(10000);
+                Thread.sleep(1000);
                 System.out.println("stop!!!");
                 alwaysRunning=false;
             } catch (InterruptedException e) {}

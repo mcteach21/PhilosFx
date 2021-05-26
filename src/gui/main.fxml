@@ -47,29 +47,29 @@
                      </fill>
                   </Circle>
 
-                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="40.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
-                        <Image url="@/eat1.png" />
+                  <ImageView fx:id="img1" fitHeight="35.0" fitWidth="35.0" layoutX="40.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
+                        <Image  url="@/eat1.png" />
                   </ImageView>
-                  <ImageView fx:id="logo" fitHeight="35.0" fitWidth="35.0" layoutX="152.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
+                  <ImageView fx:id="img2" fitHeight="35.0" fitWidth="35.0" layoutX="152.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
                      <Image url="@/eat1.png" />
                   </ImageView>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="266.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img3" fitHeight="35.0" fitWidth="35.0" layoutX="266.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@/eat1.png" />
                   </ImageView>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="309.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img4" fitHeight="35.0" fitWidth="35.0" layoutX="309.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@/eat1.png" />
                   </ImageView>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="283.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img5" fitHeight="35.0" fitWidth="35.0" layoutX="283.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@/eat1.png" />
                   </ImageView>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="161.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img6" fitHeight="35.0" fitWidth="35.0" layoutX="161.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@/eat1.png" />
                   </ImageView>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="40.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img7" fitHeight="35.0" fitWidth="35.0" layoutX="40.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@/eat1.png" />
                   </ImageView>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
-                     <Image url="@/eat0_red.png" />
+                  <ImageView fx:id="img8" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@/eat1.png" />
                   </ImageView>
                   <!--<ImageView fitHeight="35.0" fitWidth="35.0" layoutX="49.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />-->
                </children>
