@@ -1,2 +1,2 @@
 # PhilosFx
-Philos - Java Fx
+Philos - Java Fx Multithreading Example
